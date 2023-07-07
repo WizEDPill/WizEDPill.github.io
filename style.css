@@ -1,0 +1,202 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box; /* dimensionamento da caixa */ 
+    font-family:'Poppins',sans-serif ;
+    list-style:none ;
+}
+:root{
+    --bg-color: #0D0D0D;
+    --text-color:#fff;
+    --main-color:#34e7f8;
+    --other-color:#fcfcfc; 
+    --h1-font:4rem; 
+    --p-font:1rem; 
+}
+body{
+    background-color: var(--bg-color) ;
+    color: var(--text-color)
+}
+header{
+    position: fixed ;
+    width: 100%;
+    top:0;
+    right:0; 
+    z-index: 1000; 
+    display:flex;
+    align-items:center ;
+    justify-content:space-between ;/* da um espaçamento entre os menus e o nome do site que fica no menu superior  */ 
+    padding: 30px 8%;
+
+}
+*{
+    text-decoration:none
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 28px;
+    font-weight:bold;
+}
+.logo i{
+/* pegando o logo que esta na tag "I" para ser estilizado */ 
+color: var(--main-color);
+font-size:32px; 
+margin-right:5px;
+}
+.navegation{
+    display: flex;
+
+}
+.navegation a{
+    color: var(--other-color) ;
+    font-size: var(--p-font) ;
+    font-weight:500 ; /* Peso da fonte em negrito bold é O mesmo que 700. */ 
+    margin:0 30px ;
+    transition:a .55s ease;
+}
+.navegation a:hover{
+    color: var(--main-color);
+}
+.header-icons{
+    display: flex;
+    align-items: center;
+
+}
+/* class coloca . e quando ID é #, só para lembrar */ 
+#menu{
+   font-size: 35px;
+    color: var(--text-color);
+    z-index: 10001 ;
+    cursor: pointer;
+
+}
+.header-icons i{
+   margin-right: 25px; 
+   font-size: 28px;
+   cursor: pointer;
+   transition:all .5s ease;
+}
+.header-icons i:hover{
+    /* para colocar a transição do urso */ 
+    transform:translateY(-5px);/* transição no eixo y*/ 
+    color: var(--main-color);
+}
+.casa{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.casa-text h1{
+font-size:var(--h1-font) ;
+line-height: 1.2; 
+margin-bottom: 2px;
+
+}
+.home-text h5{
+    color:#ffffff99;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 60PX;
+
+}
+.home-text h3{
+    font-size: 40px; 
+    font-weight:700;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+.casa-img img{
+    max-width: 100%;
+    width: 28rem;
+    height:auto;
+    margin-left: 25% ;
+}
+/* configurando o botão */ 
+.btn{
+    display: inline-block;
+    padding: 15px, 70px;
+    font: size 16px; 
+    font-weight: 500;
+    background: transparent;
+    border:solid 2px var(--text-color);
+    transition:all.55 ease; /* padrão que estamos usando nas transições */ 
+    color: #fff;
+}
+.btn:hover{
+ background: var(--text-color);
+ border: 2px solid var(--text-color);
+ color:#000;
+}
+.main{
+    /*onde está pegando a tag main que é a imagem lateral de escolha do produto tipo slide  */ 
+position:absolute;
+top: 50%;
+left: 3%;
+transform: translateY(-50%);
+ /*efeito de quando paçar o mouse fazer um movimento  */
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap:2rem; 
+ transition:all.55s ease;
+}
+.main li img{
+    width: 50px;
+    height: auto;
+    max-width:100% ;
+
+}
+.main :hover{
+    transform:translateY(-1px) ;
+}
+.row{
+ background: var(--main-color);
+ height: 70px;
+ width:70px;
+ border-radius: 50%;/*para ficar redondo  */
+ justify-content: center;
+ transition:all.55s ease;
+ cursor: pointer;
+ display: inline-flex; /*deixar mais ajustado a imagem dentro   */
+}
+
+.row :hover{
+transform: translateY(-7px);
+}
+.row2{
+    background: #f50cf4;
+    height: 70px;
+    width:70px;
+    border-radius: 50%;/*para ficar redondo  */
+    justify-content: center;
+    transition:all.55s ease;
+    cursor: pointer;
+    display: inline-flex; /*deixar mais ajustado a imagem dentro   */
+   }
+   .row2 :hover{
+    transform: translateY(-8px);
+    }
+.row3{
+    background-color: antiquewhite;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    justify-content: center;
+    transition: all.55s ease;
+    cursor: pointer;
+    display: inline-flex; 
+}
+.row3 :hover{
+    transform: translateY(-8px);
+}
+.conteudo{
+    background-color: #353440;
+    position: absolute;
+}
